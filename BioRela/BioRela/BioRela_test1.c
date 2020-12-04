@@ -66,6 +66,7 @@ int main(void)
 		}
 	}
 
+
 	printf("생물을 입력하세요: ");
 	scanf("%s", target);
 	preorder(&nodes[1], target);
@@ -79,6 +80,8 @@ int main(void)
 	
 	len1 = lca_basic(a, b);
 	len2 = lca_basic(a, c);
+	
+	// len1, len2 대신에 이와 같은 ptr->data값을 가지는 문자열로 출력하는 코드 작성해야 함
 	printf("%s와 %s는 %d에 속합니다.\n", target, target1, len1);
 	printf("%s와 %s는 %d에 속합니다.\n", target, target2, len2);
 
