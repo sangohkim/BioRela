@@ -8,7 +8,15 @@ This project is a fusion of biology and programming. In this project, I will mak
 * Examples  
 <pre>
 <code>
-Cosmos_bipinnatus Argophyllum  // input
-Those are branched from Asterales.  // output
+Input: Cosmos_bipinnatus Argophyllum
+Output: Those are branched from Asterales.
 </code>
-</pre>
+<pre>
+
+### Programming Plan
+1. Making biological classification diagram  
+2. Transferring diagram into a tree data structure  
+3. Building a C program that interprets the tree and searching relationships of several elements in the tree  
+
+### Expansion Plan
+...
