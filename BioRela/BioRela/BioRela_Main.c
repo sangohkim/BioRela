@@ -6,32 +6,25 @@ Basic Branch에서는 완전이진트리로 구현한다.
 #include <stdio.h>
 #include <string.h>
 
+#include "BioRela_header.h"
 
-#define NUM 15
-#define LEN 100
-
-
-// 노드 구조체 선언하기
-typedef struct node* treeptr;
-typedef struct node {
-	int data;
-	char name[LEN];
-	treeptr leftChild, rightChild;
-} node;
+extern char speices[NUM][LEN];
 
 
 // 기초적인 트리 순회 방법
-void preorder(treeptr ptr, char * target);  // 전위순회
+//void preorder(treeptr ptr, char * target);  // 전위순회
 
-void inorder(treeptr ptr, char * target);  // 중위순회
-void postorder(treeptr ptr, char * target);  // 후위순회
-int lca_basic(int a, int b);  // LCA 함수(완전이진트리에서만 작동가능)
+//void inorder(treeptr ptr, char * target);  // 중위순회
+//void postorder(treeptr ptr, char * target);  // 후위순회
+//int lca_basic(int a, int b);  // LCA 함수(완전이진트리에서만 작동가능)
 
 
 // 생명체 예시
+/*
 char species[NUM][LEN] = {
     "Magnoliopsida", "Asterales", "Fabales_big", "Asteraceae", "Argophyllaceae", "Fabales", "Polygalaceae", "Helianthus", "Cosmos", "Argophyllum", "Corokia", "Phaseolus", "Pisum", "Polygala", "FORM"
 };
+*/
 
 
 // 사용자 입력
@@ -107,49 +100,4 @@ int main(void)
 
 
 	return 0;
-}
-
-
-int lca_basic(int a, int b)
-{
-	if (a == 1 || b == 1)
-		return 1;
-	else if (a == b)
-		return a;
-	else if (a / 2 == b / 2)
-		return a / 2;
-	else
-		return lca_basic(a >= b ? a / 2 : b / 2, a >= b ? b : a);
-}
-
-
-void preorder(treeptr ptr, char * target)
-{
-	if (ptr)
-	{
-		if (!strncmp(ptr->name, target, LEN))
-			target_idx = ptr->data;
-		preorder(ptr->leftChild, target);
-		preorder(ptr->rightChild, target);
-	}
-}
-
-void inorder(treeptr ptr, char * target)
-{
-	if (ptr)
-	{
-		inorder(ptr->leftChild, target);
-		return;
-		inorder(ptr->rightChild, target);
-	}
-}
-
-void postorder(treeptr ptr, char * target)
-{
-	if (ptr)
-	{
-		postorder(ptr->leftChild, target);
-		postorder(ptr->rightChild, target);
-		return;
-	}
 }
