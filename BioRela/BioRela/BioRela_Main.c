@@ -87,8 +87,8 @@ int main(void)
 		len2 = lca_basic(a, c);
 
 		// len1, len2 대신에 이와 같은 ptr->data값을 가지는 문자열로 출력하는 코드 작성해야 함
-		printf("%s와 %s의 LCA는 %s에 속합니다.\n", target, target1, len1);
-		printf("%s와 %s의 LCA는 %s에 속합니다.\n", target, target2, len2);
+		printf("%s와 %s의 LCA는 %d에 속합니다.\n", target, target1, len1);
+		printf("%s와 %s의 LCA는 %d에 속합니다.\n", target, target2, len2);
 		if (len1 / 2 < len2 / 2)
 			printf("%s와 %s의 유연관계가 %s와 %s보다 더 가깝습니다.\n", target, target1, target, target2);
 		else if (len1 / 2 > len2 / 2)
