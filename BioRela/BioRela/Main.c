@@ -69,7 +69,7 @@ int main(void)
 	while (1)
 	{
 		printf("#%d\n\n", ++count);
-        printf("노드를 입력하세요: ________________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+                printf("생물학명을 입력하세요: ________________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
 		scanf("%s", target);
 		if (!strcmp(target, "q"))
 		{
@@ -81,7 +81,7 @@ int main(void)
 			printf("Search: ________________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
 			scanf("%s", order);
 			search(order);
-			printf("\n노드를 입력하세요: ________________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+			printf("\n생물학명을 입력하세요: ________________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
 			scanf("%s", target);
 			if (!strcmp(target, "q"))
 			{
@@ -91,7 +91,7 @@ int main(void)
 		}
 		preorder(&nodes[1], target);
 		a = target_idx;
-		printf("%s와 비교를 원하는 두 노드을 입력하세요:\n", target);
+		printf("%s와 비교를 원하는 두 생물의 학명을 입력하세요:\n", target);
 		printf("1. ________________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
 		scanf("%s", target1);
 		if (!strcmp(target1, "q"))
